@@ -1,0 +1,31 @@
+targets:
+  $default:
+    builders:
+      build_web_compilers|entrypoint:
+        generate_for:
+          - web/**.dart
+        options:
+          compiler: dart2js
+          dart2js_args:
+            - -O4
+            - --minify
+            - --no-source-maps
+            - --fast-startup
+            - --trust-primitives
+            - --omit-implicit-checks
+
+      # Enable build caching
+      build_cache:
+        directory: .dart_tool/build
+        store_generated_outputs: true
+        store_dependency_info: true
+
+      # Resource optimization
+      resource_pool:
+        max_workers: 4  # Adjust based on system CPU cores
+        resource_multiplier: 1.5
+
+      # Asset optimization
+      assets:
+        compress: true
+        cache: true

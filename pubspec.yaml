@@ -1,0 +1,44 @@
+name: aura_app
+description: A motivational fitness & wealth trainer app
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get: ^4.6.5
+  supabase_flutter: ^1.10.25
+  path_provider: ^2.1.5
+  flutter_local_notifications: ^15.1.1
+  fl_chart: ^0.65.0
+  shared_preferences: ^2.2.2
+  image_picker: ^1.0.4
+  intl: ^0.18.1
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
+          weight: 600
